@@ -57,5 +57,5 @@ jobs:
         run: node --version
       - uses: rickstaa/action-create-tag@v1
         with:
-          tag: ${{ jobs.version.outputs.version_tag }}
+          tag: ${{ needs.version.outputs.version_tag }}
           message: "Latest release"
